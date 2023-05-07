@@ -18,3 +18,20 @@ jobs:
 
     - name: Display python version
       run: python --version
+
+pylint-test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+
+    - name: Install dependencies
+      run: pip install pylint
+
+    - name: Run pylint
+      run: pylint app.py  # Replace 'your_code.py' with the actual
