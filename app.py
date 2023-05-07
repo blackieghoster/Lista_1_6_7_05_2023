@@ -15,7 +15,7 @@ def index():
     Index
 
     :return: return index site code.
-    rtype: string
+    :rtype: string
     """
     website = "<h1>Hello WSB! Greetings from Flask!</h1>"
 
