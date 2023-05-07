@@ -1,3 +1,9 @@
+"""Basic flask app
+
+This is just a basic flask app, no less, no more.
+
+"""
+
 from flask import Flask
 
 app = Flask(__name__)
@@ -10,7 +16,6 @@ def index():
 
     :return: return index site code.
     rtype: string
-
     """
     website = "<h1>Hello WSB! Greetings from Flask!</h1>"
 
