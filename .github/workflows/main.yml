@@ -4,14 +4,21 @@ on:
     branches:
       - master
 jobs:
-  runs-on: ubuntu-latest
   display-python-version:
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.11
-    job_2:
-      needs: job_1
-      steps:
-        - name: Check out repository code
-          uses: actions/checkout@v3
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up python environment
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+
+    - name: Display python version
+      run: python --version
+
+  run-pylint:
+    steps:
+      run: echo "Lorem ipsum"
